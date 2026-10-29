@@ -1,10 +1,17 @@
-export default function ProductCard() {
+interface Product {
+  title: string
+  price: string
+  category: string
+  imageSrc: string
+}
+
+export default function ProductCard({title = 'Temp', price = '0', category = 'Temp', imageSrc = 'Temp'}: Product) {
   return (
     <article className="group rounded-[1.25rem] border border-slate-200 bg-white p-3 transition-all duration-400 hover:-translate-y-1.5 hover:border-blue-400 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.08)]">
       <div className="relative overflow-hidden rounded-2xl bg-slate-100">
         <img
-          src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&q=80&w=800"
-          alt="Technical Shell Jacket"
+          src={imageSrc}
+          alt={title}
           className="aspect-4/5 w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
 
@@ -84,7 +91,7 @@ export default function ProductCard() {
       <div className="mt-4 space-y-1 px-1 pb-2">
         <div className="flex items-center justify-between">
           <p className="text-[10px] font-black tracking-[0.15em] text-blue-600/70 uppercase">
-            Outerwear
+            {category}
           </p>
           <div className="flex items-center gap-1">
             <svg
@@ -101,14 +108,14 @@ export default function ProductCard() {
           </div>
         </div>
         <h3 className="text-sm font-bold text-slate-900 transition-colors group-hover:text-blue-600">
-          Technical Shell Jacket
+          {title}
         </h3>
         <p className="text-[11px] font-medium text-slate-500">In Stock • Ships in 2 days</p>
 
         <div className="flex items-center justify-between gap-3 pt-3">
           <div className="flex flex-col">
             <span className="text-[10px] leading-none font-medium text-slate-400 line-through">
-              1,450 kr
+              {price} kr
             </span>
             <span className="text-lg font-black tracking-tight text-slate-900">890 kr</span>
           </div>
