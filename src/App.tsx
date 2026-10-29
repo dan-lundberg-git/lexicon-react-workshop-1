@@ -1,7 +1,7 @@
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Main from './components/Main'
-import Newsletter from './components/Newsletter'
+import Footer from './components/footer/Footer'
+import Header from './components/header/Header'
+import Main from './components/main/Main'
+import Newsletter from './components/newsletter/Newsletter'
 
 function App() {
   return (
