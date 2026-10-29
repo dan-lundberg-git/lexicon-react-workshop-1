@@ -1,3 +1,5 @@
+import { Menu, Search, ShoppingBag, User } from 'lucide-react'
+
 export default function RightIcons() {
   return (
     <div className="flex items-center gap-2">
@@ -18,21 +20,7 @@ export default function RightIcons() {
           placeholder="Search products..."
           className="h-10 w-48 rounded-xl border border-blue-400/20 bg-blue-500/30 pr-4 pl-10 text-xs font-medium text-blue-50 transition-all duration-300 outline-none placeholder:text-blue-200/50 focus:w-64 focus:bg-blue-500/50"
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          className="absolute top-3 left-3.5 text-blue-200"
-        >
-          <circle cx="11" cy="11" r="8" />
-          <path d="m21 21-4.3-4.3" />
-        </svg>
+        <Search className="absolute top-3 left-3.5 text-blue-200" size={16} />
       </div>
 
       {/* Cart */}
@@ -42,21 +30,7 @@ export default function RightIcons() {
         aria-label="Cart"
         title="Cart"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-          <path d="M3 6h18" />
-          <path d="M16 10a4 4 0 0 1-8 0" />
-        </svg>
+        <ShoppingBag size={20} />
         {/* Cart Count Badge */}
         <span
           id="cart-count"
@@ -73,20 +47,7 @@ export default function RightIcons() {
         aria-label="Account"
         title="Account"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-          <circle cx="12" cy="7" r="4" />
-        </svg>
+        <User size={20} />
       </button>
 
       {/* Mobile Menu Button */}
@@ -96,21 +57,7 @@ export default function RightIcons() {
         aria-label="Menu"
         title="Menu"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <line x1="4" x2="20" y1="12" y2="12" />
-          <line x1="4" x2="20" y1="6" y2="6" />
-          <line x1="4" x2="20" y1="18" y2="18" />
-        </svg>
+        <Menu size={24} />
       </button>
     </div>
   )
