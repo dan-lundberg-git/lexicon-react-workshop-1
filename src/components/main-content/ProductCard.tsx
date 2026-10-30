@@ -1,8 +1,8 @@
 import { Eye, Heart, Plus, Star } from 'lucide-react'
 
-interface Product {
+export interface Product {
   title: string
-  price: string
+  price: number
   category: string
   imageSrc: string
 }
@@ -35,11 +35,6 @@ export default function ProductCard({ title, price, category, imageSrc }: Produc
           </button>
         </div>
 
-        {/* Badge */}
-        <span className="absolute top-3 left-3 rounded-full border border-rose-100/50 bg-rose-500/10 px-3 py-1 text-[11px] font-bold text-rose-600 backdrop-blur-md">
-          Discount
-        </span>
-
         {/* Favorite */}
         <button
           type="button"
@@ -71,10 +66,7 @@ export default function ProductCard({ title, price, category, imageSrc }: Produc
 
         <div className="flex items-center justify-between gap-3 pt-3">
           <div className="flex flex-col">
-            <span className="text-[10px] leading-none font-medium text-slate-400 line-through">
-              {price} kr
-            </span>
-            <span className="text-lg font-black tracking-tight text-slate-900">890 kr</span>
+            <span className="text-lg font-black tracking-tight text-slate-900">{price} kr</span>
           </div>
 
           <button
