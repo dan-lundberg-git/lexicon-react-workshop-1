@@ -1,3 +1,5 @@
+import { Eye, Heart, Plus, Star } from 'lucide-react'
+
 interface Product {
   title: string
   price: string
@@ -5,7 +7,7 @@ interface Product {
   imageSrc: string
 }
 
-export default function ProductCard({title = 'Temp', price = '0', category = 'Temp', imageSrc = 'Temp'}: Product) {
+export default function ProductCard({ title, price, category, imageSrc }: Product) {
   return (
     <article className="group rounded-[1.25rem] border border-slate-200 bg-white p-3 transition-all duration-400 hover:-translate-y-1.5 hover:border-blue-400 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.08)]">
       <div className="relative overflow-hidden rounded-2xl bg-slate-100">
@@ -22,40 +24,14 @@ export default function ProductCard({title = 'Temp', price = '0', category = 'Te
             className="flex h-12 w-12 translate-y-4 items-center justify-center rounded-full bg-white text-slate-900 shadow-xl transition-transform duration-500 group-hover:translate-y-0 hover:bg-blue-600 hover:text-white"
             aria-label="Quick View"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-              <circle cx="12" cy="12" r="3" />
-            </svg>
+            <Eye size={20} />
           </button>
           <button
             type="button"
             className="flex h-12 w-12 translate-y-4 items-center justify-center rounded-full bg-white text-slate-900 shadow-xl transition-transform delay-75 duration-500 group-hover:translate-y-0 hover:bg-blue-600 hover:text-white"
             aria-label="Add to cart"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M5 12h14" />
-              <path d="M12 5v14" />
-            </svg>
+            <Plus size={20} />
           </button>
         </div>
 
@@ -71,20 +47,10 @@ export default function ProductCard({title = 'Temp', price = '0', category = 'Te
           aria-label="Add to favorites"
           title="Favorite"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+          <Heart
+            size={20}
             className="transition-colors group-hover/heart:fill-rose-500 group-hover/heart:stroke-rose-500"
-          >
-            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-          </svg>
+          />
         </button>
       </div>
 
@@ -94,16 +60,7 @@ export default function ProductCard({title = 'Temp', price = '0', category = 'Te
             {category}
           </p>
           <div className="flex items-center gap-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="10"
-              height="10"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="text-amber-400"
-            >
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
+            <Star size={10} className="fill-amber-400 text-amber-400" />
             <span className="text-[10px] font-bold text-slate-400">4.9</span>
           </div>
         </div>
