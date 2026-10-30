@@ -61,3 +61,25 @@ Check that:
 - [ ] the `README` explains your components and props
 - [ ] there are no unused files, components, or variables
 - [ ] the final solution is ready to present
+
+## Questions to Answer
+
+### Which components did you create?
+
+A lot of components were created. Basically most of the commented code blocks like footer, links, header, aside, main, product grid, product cards etcetera. Probably too many created, but since this is a workshop. I let it remain that way.
+
+### What's the purpose of each component?
+
+At this initial level, basically for code isolation and for better readability. It's easier to understand a relatively small list of tags (components) in a page than a huge codeblock.
+
+### Which props are passed between components?
+
+As of writing this, only between the ProductGrid component and the ProductCard component. This is to be able to dynamically render an infinite amount of product cards on a page.
+
+### Why did you use props?
+
+See answer above, to not lock in a page to a static result, but to be able to render data dynamically, and for reusability of course.
+
+### How do the components work together?
+
+A parent-child relationship is made, and where needed data is passed by adhering to a pre-defined TypeScript interface describing the shape of an object (like title, price etcetera).

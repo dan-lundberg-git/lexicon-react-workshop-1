@@ -1,4 +1,4 @@
-import { Box } from "lucide-react"
+import { Box } from 'lucide-react'
 
 export default function Brands() {
   return (

@@ -66,7 +66,9 @@ export default function ProductCard({ title, price, category, imageSrc }: Produc
 
         <div className="flex items-center justify-between gap-3 pt-3">
           <div className="flex flex-col">
-            <span className="text-lg font-black tracking-tight text-slate-900">{price} kr</span>
+            <span className="text-lg font-black tracking-tight text-slate-900">
+              {price.toLocaleString()} kr
+            </span>
           </div>
 
           <button
